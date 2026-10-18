@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Education – Pinkal Rathod | BCA at Gujarat Vidyapith{% endblock %}
+{% block meta_description %}Academic qualifications and education history of Pinkal Rathod, pursuing Bachelor of Computer Applications at Gujarat Vidyapith (2025 – Present).{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'portfolio:home' %}"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Education</li>
+            </ol>
+        </nav>
+        <span class="section-tag">Academic Journey</span>
+        <h1 class="page-title display-5 fw-bold mb-3">Education &amp; <span class="gradient-text">Qualifications</span></h1>
+        <p class="text-muted-custom lead max-width-650">
+            Formal computer applications and software engineering foundations at Gujarat Vidyapith.
+        </p>
+    </div>
+</div>
+
+<!-- Education Timeline Section -->
+<section class="pb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Academic Credentials Timeline -->
+                <div class="education-timeline position-relative">
+                    {% for edu in education_list %}
+                        <div class="timeline-item mb-5 position-relative">
+                            <!-- Timeline Node Icon -->
+                            <div class="timeline-marker d-flex align-items-center justify-content-center shadow-sm">
+                                <i class="{{ edu.icon }} text-white"></i>
+                            </div>
+
+                            <!-- Timeline Card Content -->
+                            <div class="timeline-content modern-glass-card p-4 p-md-5 ms-md-4">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                                    <span class="badge badge-subtle">
+                                        <i class="fa-solid fa-clock me-1"></i> {{ edu.period }}
+                                    </span>
+                                    {% if edu.status %}
+                                        <span class="badge badge-accent-glow">
+                                            <i class="fa-solid fa-circle-dot me-1"></i> {{ edu.status }}
+                                        </span>
+                                    {% endif %}
+                                </div>
+
+                                <h2 class="h3 fw-bold mb-2">{{ edu.degree }}</h2>
+                                
+                                <div class="d-flex align-items-center gap-2 text-accent fw-semibold mb-3">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <span class="fs-5">{{ edu.institution }}</span>
+                                </div>
+
+                                <p class="text-muted-custom mb-4">
+                                    {{ edu.description }}
+                                </p>
+
+                                <!-- Core Curriculum Highlights -->
+                                <div class="academic-highlights p-3 rounded-3 mb-4">
+                                    <h3 class="h6 text-accent mb-2">
+                                        <i class="fa-solid fa-book-open me-2"></i> Key Curricular Focus
+                                    </h3>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge badge-subtle"><i class="fa-solid fa-check me-1"></i> Object-Oriented Programming (Python, Java)</span>
+                                        <span class="badge badge-subtle"><i class="fa-solid fa-check me-1"></i> Database Management Systems (SQL)</span>
+                                        <span class="badge badge-subtle"><i class="fa-solid fa-check me-1"></i> Web Technologies &amp; Architecture</span>
+                                        <span class="badge badge-subtle"><i class="fa-solid fa-check me-1"></i> Mobile Application Concepts</span>
+                                    </div>
+                                </div>
+
+                                <!-- Optional Fields (Only rendered when verified and present; never shown if empty) -->
+                                {% if edu.semester or edu.cgpa or edu.school or edu.standard_12 or edu.passing_year or edu.marks %}
+                                    <div class="optional-academic-details border-top border-subtle pt-3 mt-3">
+                                        <h4 class="h6 text-muted-custom mb-2">Additional Academic Metrics</h4>
+                                        <div class="row g-2">
+                                            {% if edu.semester %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">Current Semester</span>
+                                                    <strong>{{ edu.semester }}</strong>
+                                                </div>
+                                            {% endif %}
+                                            {% if edu.cgpa %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">CGPA</span>
+                                                    <strong>{{ edu.cgpa }}</strong>
+                                                </div>
+                                            {% endif %}
+                                            {% if edu.standard_12 %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">12th Standard</span>
+                                                    <strong>{{ edu.standard_12 }}</strong>
+                                                </div>
+                                            {% endif %}
+                                            {% if edu.school %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">School</span>
+                                                    <strong>{{ edu.school }}</strong>
+                                                </div>
+                                            {% endif %}
+                                            {% if edu.passing_year %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">Passing Year</span>
+                                                    <strong>{{ edu.passing_year }}</strong>
+                                                </div>
+                                            {% endif %}
+                                            {% if edu.marks %}
+                                                <div class="col-sm-6 col-md-4">
+                                                    <span class="d-block tiny text-muted-custom">Marks</span>
+                                                    <strong>{{ edu.marks }}</strong>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle small text-muted-custom">
+                                    <span><i class="fa-solid fa-location-dot me-1 text-accent"></i> Gujarat, India</span>
+                                    <span><i class="fa-solid fa-certificate me-1 text-accent"></i> Verified Academic Record</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Next Steps & Related Links -->
+                <div class="text-center pt-3">
+                    <p class="text-muted-custom small mb-3">Explore the technical skills acquired through this curriculum:</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{% url 'portfolio:skills' %}" class="btn btn-outline-glass px-4 py-2">
+                            <i class="fa-solid fa-code me-1"></i> Technical Skills
+                        </a>
+                        <a href="{% url 'portfolio:projects' %}" class="btn btn-primary-gradient px-4 py-2">
+                            <i class="fa-solid fa-layer-group me-1"></i> Academic Practicals &amp; Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

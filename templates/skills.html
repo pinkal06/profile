@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Technical Skills – Pinkal Rathod | Python, Django, Flutter & Database{% endblock %}
+{% block meta_description %}Technical competencies and tools studied by Pinkal Rathod including Python, Django, Flutter, Android Studio, SQLite, and MySQL.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'portfolio:home' %}"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Technical Skills</li>
+            </ol>
+        </nav>
+        <span class="section-tag">Competencies &amp; Tooling</span>
+        <h1 class="page-title display-5 fw-bold mb-3">Technical <span class="gradient-text">Skills</span></h1>
+        <p class="text-muted-custom lead max-width-650">
+            Curated overview of programming languages, web frameworks, mobile tooling, and databases actively practiced.
+        </p>
+    </div>
+</div>
+
+<!-- Skills Showcase Section -->
+<section class="pb-5">
+    <div class="container">
+        <!-- Integrity Note -->
+        <div class="alert alert-subtle-accent mb-5 d-flex align-items-center gap-3 p-3 modern-glass-card" role="alert">
+            <i class="fa-solid fa-circle-info fs-4 text-accent"></i>
+            <div class="small">
+                <strong>Skill Presentation Policy:</strong> In alignment with authentic academic reporting, technologies are presented with their practical focus and learning status. No artificial percentage bars or unverified claims.
+            </div>
+        </div>
+
+        <!-- Loop Over Skill Categories -->
+        {% for cat_key, category in skills_data.items %}
+            <div class="skill-category-block mb-5">
+                <div class="d-flex align-items-center gap-3 mb-3 border-bottom border-subtle pb-3">
+                    <div class="category-icon-box">
+                        <i class="{{ category.category_icon }} text-accent"></i>
+                    </div>
+                    <div>
+                        <h2 class="h4 mb-1 fw-bold">{{ category.category_name }}</h2>
+                        <p class="small text-muted-custom mb-0">{{ category.description }}</p>
+                    </div>
+                </div>
+
+                <!-- Skill Cards Grid -->
+                <div class="row g-4">
+                    {% for item in category.items %}
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="skill-card modern-glass-card p-4 h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-start justify-content-between mb-3">
+                                        <div class="skill-icon-wrapper {{ item.color_class }}">
+                                            <i class="{{ item.icon }}"></i>
+                                        </div>
+                                        <span class="badge badge-subtle">
+                                            {{ item.status }}
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-2">{{ item.name }}</h3>
+                                    <p class="small text-muted-custom mb-3">
+                                        {{ item.focus }}
+                                    </p>
+                                </div>
+                                <div class="skill-card-footer pt-3 border-top border-subtle d-flex align-items-center justify-content-between tiny text-muted-custom">
+                                    <span><i class="fa-solid fa-graduation-cap text-accent me-1"></i> Active Study</span>
+                                    <span>Verified</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- Bottom Action CTA -->
+        <div class="modern-glass-card p-4 p-md-5 text-center mt-4">
+            <h3 class="h4 fw-bold mb-2">See How These Skills Are Applied</h3>
+            <p class="text-muted-custom max-width-650 mx-auto mb-4">
+                Explore practical courseworks, prototype systems, and application concepts built with these tools.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'portfolio:projects' %}" class="btn btn-primary-gradient px-4 py-2">
+                    <i class="fa-solid fa-layer-group me-1"></i> View Project Showcase
+                </a>
+                <a href="{% url 'portfolio:education' %}" class="btn btn-outline-glass px-4 py-2">
+                    <i class="fa-solid fa-graduation-cap me-1"></i> Academic Coursework
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

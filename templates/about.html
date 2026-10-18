@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me – Pinkal Rathod | BCA Student & Aspiring Developer{% endblock %}
+{% block meta_description %}Learn about Pinkal Rathod, BCA student at Gujarat Vidyapith, exploring Python Django web systems, Flutter mobile engineering, and database management.{% endblock %}
+
+{% block content %}
+<!-- Page Breadcrumb & Header -->
+<div class="page-header py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'portfolio:home' %}"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Me</li>
+            </ol>
+        </nav>
+        <span class="section-tag">Professional Profile & Story</span>
+        <h1 class="page-title display-5 fw-bold mb-3">About <span class="gradient-text">Pinkal Rathod</span></h1>
+        <p class="text-muted-custom lead max-width-650">
+            Get to know my academic background at Gujarat Vidyapith, software development passions, and technical aspirations.
+        </p>
+    </div>
+</div>
+
+<!-- Main About Content Section -->
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+            <!-- Left Column: Biography Narrative -->
+            <div class="col-lg-7">
+                <!-- Academic Identity Card -->
+                <div class="bio-narrative-card modern-glass-card p-4 p-md-5 mb-4">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="icon-avatar-badge">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div>
+                            <h2 class="h4 mb-1">Academic & Technical Profile</h2>
+                            <p class="small text-muted-custom mb-0">Gujarat Vidyapith &bull; BCA (2025 – Present)</p>
+                        </div>
+                    </div>
+
+                    <div class="bio-text mb-4">
+                        <p class="lead fw-normal text-primary-custom mb-3">
+                            {{ bio_intro }}
+                        </p>
+                        <p class="text-muted-custom mb-3">
+                            {{ bio_programming }}
+                        </p>
+                        <p class="text-muted-custom mb-3">
+                            {{ bio_web_mobile }}
+                        </p>
+                        <p class="text-muted-custom mb-0">
+                            {{ bio_database_ml }}
+                        </p>
+                    </div>
+
+                    <!-- Verified Academic Status Highlight -->
+                    <div class="alert alert-subtle-accent d-flex align-items-center gap-3 p-3 mb-0" role="alert">
+                        <i class="fa-solid fa-circle-check fs-4 text-accent"></i>
+                        <div class="small">
+                            <strong>Academic Integrity Notice:</strong> All details presented represent verified coursework and ongoing academic pursuits at Gujarat Vidyapith. No fabricated employment claims or unearned accolades.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Shortcuts Card -->
+                <div class="modern-glass-card p-4 d-flex flex-wrap align-items-center justify-content-between gap-3">
+                    <div>
+                        <h3 class="h6 mb-1">Explore More Sections</h3>
+                        <p class="tiny text-muted-custom mb-0">Review verified coursework, skills, and interactive projects.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="{% url 'portfolio:education' %}" class="btn btn-sm btn-outline-glass">
+                            <i class="fa-solid fa-graduation-cap me-1"></i> Education
+                        </a>
+                        <a href="{% url 'portfolio:skills' %}" class="btn btn-sm btn-outline-glass">
+                            <i class="fa-solid fa-code me-1"></i> Skills
+                        </a>
+                        <a href="{% url 'portfolio:projects' %}" class="btn btn-sm btn-primary-gradient">
+                            <i class="fa-solid fa-layer-group me-1"></i> Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Quick Info & Education Pill -->
+            <div class="col-lg-5">
+                <!-- Professional Portrait Card -->
+                <div class="modern-glass-card p-4 mb-4 text-center">
+                    <div class="about-portrait-wrapper mx-auto mb-3">
+                        <img src="{% static 'images/pinkal_rathod.jpg' %}" alt="Pinkal Rathod" class="about-portrait-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-1">{{ name }}</h3>
+                    <p class="text-accent small mb-2">{{ title }}</p>
+                    <span class="badge badge-subtle">
+                        <i class="fa-solid fa-graduation-cap me-1"></i> Gujarat Vidyapith &bull; BCA Scholar
+                    </span>
+                </div>
+
+                <!-- Verified Identity Summary -->
+                <div class="modern-glass-card p-4 mb-4">
+                    <h3 class="h5 mb-3 border-bottom border-subtle pb-2">
+                        <i class="fa-solid fa-id-card text-accent me-2"></i> Quick Facts
+                    </h3>
+                    
+                    <ul class="list-unstyled quick-facts-list mb-0">
+                        <li class="d-flex justify-content-between py-2 border-bottom border-subtle">
+                            <span class="text-muted-custom small">Full Name:</span>
+                            <strong class="small">{{ name }}</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-subtle">
+                            <span class="text-muted-custom small">Primary Focus:</span>
+                            <strong class="small text-end">Python Django &amp; Flutter</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-subtle">
+                            <span class="text-muted-custom small">University:</span>
+                            <strong class="small">Gujarat Vidyapith</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-subtle">
+                            <span class="text-muted-custom small">Course:</span>
+                            <strong class="small">BCA</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-2 border-bottom border-subtle">
+                            <span class="text-muted-custom small">Period:</span>
+                            <strong class="small">2025 – Present</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-2">
+                            <span class="text-muted-custom small">Status:</span>
+                            <span class="badge badge-subtle">Active BCA Student</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic Philosophy Box -->
+                <div class="modern-glass-card p-4">
+                    <h3 class="h5 mb-3 border-bottom border-subtle pb-2">
+                        <i class="fa-solid fa-compass-drafting text-accent me-2"></i> Development Philosophy
+                    </h3>
+                    <div class="philosophy-item mb-3">
+                        <h4 class="h6 text-accent mb-1"><i class="fa-solid fa-cube me-1"></i> Clean Code & Structure</h4>
+                        <p class="small text-muted-custom mb-0">
+                            Prioritizing readable architectures, separation of concerns, and robust documentation over quick shortcuts.
+                        </p>
+                    </div>
+                    <div class="philosophy-item mb-3">
+                        <h4 class="h6 text-accent mb-1"><i class="fa-solid fa-mobile me-1"></i> Multi-Platform Adaptability</h4>
+                        <p class="small text-muted-custom mb-0">
+                            Bridging backend data pipelines seamlessly into mobile and web client interfaces.
+                        </p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h4 class="h6 text-accent mb-1"><i class="fa-solid fa-seedling me-1"></i> Continuous Growth</h4>
+                        <p class="small text-muted-custom mb-0">
+                            Expanding technical horizons daily through academic coursework, open experimentation, and practical building.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Interests Grid -->
+        <div class="mt-5 pt-3">
+            <div class="section-header text-center mb-5">
+                <span class="section-tag">Areas of Study</span>
+                <h2 class="section-title">Technical Interests & Disciplines</h2>
+                <p class="text-muted-custom max-width-650 mx-auto">
+                    Key engineering domains that I actively explore in university practicals and personal development.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                {% for interest in technical_interests_cards %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="discipline-icon">
+                                    <i class="{{ interest.icon }} text-accent"></i>
+                                </div>
+                                <span class="badge badge-subtle">{{ interest.tag }}</span>
+                            </div>
+                            <h3 class="h5 mb-2">{{ interest.title }}</h3>
+                            <p class="small text-muted-custom mb-0 flex-grow-1">
+                                {{ interest.description }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

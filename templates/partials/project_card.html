@@ -1,0 +1,69 @@
+{% load static %}
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork {{ project.art_class }} position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="{{ project.icon }} project-art-icon"></i>
+            </div>
+            {% if project.status %}
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    {{ project.status }}
+                </span>
+            {% endif %}
+            <span class="project-category-badge">{{ project.category }}</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                {{ project.title }}
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                {{ project.description }}
+            </p>
+
+            <!-- Technology Tags -->
+            {% if project.tags %}
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    {% for tag in project.tags %}
+                        <span class="badge badge-tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    {% if project.github_url %}
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-glass d-inline-flex align-items-center gap-1" aria-label="View source code for {{ project.title }} on GitHub">
+                            <i class="fa-brands fa-github"></i>
+                            <span>Code</span>
+                        </a>
+                    {% endif %}
+
+                    {% if project.demo_url %}
+                        <a href="{{ project.demo_url }}" target="_blank" rel="noopener" class="btn btn-sm btn-primary-gradient d-inline-flex align-items-center gap-1" aria-label="View live demo for {{ project.title }}">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Demo</span>
+                        </a>
+                    {% endif %}
+
+                    {% if not project.github_url and not project.demo_url %}
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    {% endif %}
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Pinkal Rathod – Flutter Developer & BCA Student | Get in Touch{% endblock %}
+{% block meta_description %}Contact Pinkal Rathod for Flutter mobile app development internships, projects, or technical collaboration. Based in Ahmedabad, Gujarat, India.{% endblock %}
+
+{% block content %}
+<!-- Page Breadcrumb & Header -->
+<div class="page-header py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'portfolio:home' %}"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+        <span class="section-tag">Direct Inquiries &amp; Collaboration</span>
+        <h1 class="page-title display-5 fw-bold mb-3">Get in <span class="gradient-text">Touch</span></h1>
+        <p class="text-muted-custom lead max-width-650">
+            Have a Flutter internship opportunity, software project idea, or question? Send a message directly through the form below.
+        </p>
+    </div>
+</div>
+
+<!-- Main Contact Section -->
+<section class="pb-5">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+            
+            <!-- Left Column: Verified Contact Information & Badges -->
+            <div class="col-lg-5">
+                <!-- Profile Summary Card -->
+                <div class="contact-info-card modern-glass-card p-4 p-md-5 mb-4">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="brand-badge fs-4">PR</div>
+                        <div>
+                            <h2 class="h4 fw-bold mb-1">Pinkal Rathod</h2>
+                            <p class="small text-accent mb-0 fw-semibold">Aspiring Flutter Developer | BCA Student</p>
+                        </div>
+                    </div>
+
+                    <p class="text-muted-custom small mb-4">
+                        Currently studying Bachelor of Computer Applications at Gujarat Vidyapith. Actively building mobile applications with Flutter and Dart, alongside full-stack Python Django web applications. Open to internship and junior developer opportunities.
+                    </p>
+
+                    <!-- Contact Detail Items -->
+                    <div class="contact-details-list d-flex flex-column gap-3 mb-4">
+                        <!-- Location Item -->
+                        <div class="contact-item d-flex align-items-center gap-3 p-3 rounded-3">
+                            <div class="contact-icon-box shadow-sm">
+                                <i class="fa-solid fa-location-dot text-accent"></i>
+                            </div>
+                            <div>
+                                <span class="d-block tiny text-muted-custom text-uppercase fw-semibold">Location</span>
+                                <span class="fw-semibold text-primary-custom">Ahmedabad, Gujarat, India</span>
+                            </div>
+                        </div>
+
+                        <!-- Personal Email Item -->
+                        <div class="contact-item d-flex align-items-center gap-3 p-3 rounded-3">
+                            <div class="contact-icon-box shadow-sm">
+                                <i class="fa-solid fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <span class="d-block tiny text-muted-custom text-uppercase fw-semibold">Personal Email</span>
+                                <a href="mailto:pinkalrathod2007@gmail.com" class="fw-semibold text-accent text-decoration-none text-break">
+                                    pinkalrathod2007@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Academic Affiliation Item -->
+                        <div class="contact-item d-flex align-items-center gap-3 p-3 rounded-3">
+                            <div class="contact-icon-box shadow-sm">
+                                <i class="fa-solid fa-building-columns text-accent"></i>
+                            </div>
+                            <div>
+                                <span class="d-block tiny text-muted-custom text-uppercase fw-semibold">Institution</span>
+                                <span class="fw-semibold text-primary-custom">Gujarat Vidyapith, Ahmedabad</span>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Profile Item -->
+                        {% if linkedin_url %}
+                            <div class="contact-item d-flex align-items-center gap-3 p-3 rounded-3">
+                                <div class="contact-icon-box shadow-sm" style="background: rgba(10, 102, 194, 0.15); border-color: rgba(10, 102, 194, 0.35);">
+                                    <i class="fa-brands fa-linkedin-in text-accent"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <span class="d-block tiny text-muted-custom text-uppercase fw-semibold">Professional Profile</span>
+                                    <a href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer" class="fw-semibold text-accent text-decoration-none d-inline-flex align-items-center gap-2" id="contactLinkedInLink" title="Pinkal Rathod on LinkedIn">
+                                        <span>LinkedIn</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square tiny"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Privacy & Authenticity Notice -->
+                    <div class="alert alert-subtle-accent d-flex align-items-start gap-3 p-3 mb-0" role="alert">
+                        <i class="fa-solid fa-shield-halved fs-5 text-accent mt-1"></i>
+                        <div class="tiny text-muted-custom">
+                            <strong class="d-block text-primary-custom mb-1">Privacy Guarantee:</strong>
+                            Messages submitted here are securely stored in the administrative backend and are never published publicly or shared with third parties.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Readiness Badge Card -->
+                <div class="modern-glass-card p-4 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="status-indicator"></span>
+                        <div>
+                            <span class="d-block small fw-bold text-primary-custom">Internship Ready</span>
+                            <span class="tiny text-muted-custom">Open to Flutter &amp; Mobile Roles</span>
+                        </div>
+                    </div>
+                    <a href="{% url 'portfolio:resume' %}" class="btn btn-outline-glass btn-sm">
+                        <i class="fa-solid fa-file-lines me-1"></i> View Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Contact Message Form -->
+            <div class="col-lg-7">
+                <div class="contact-form-card modern-glass-card p-4 p-md-5">
+                    <div class="mb-4">
+                        <h2 class="h3 fw-bold mb-2">Send a <span class="gradient-text">Message</span></h2>
+                        <p class="text-muted-custom small mb-0">
+                            Fill in your details below and your message will be forwarded directly to Pinkal Rathod.
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form method="post" action="{% url 'portfolio:contact' %}" novalidate class="contact-form" id="contactForm">
+                        {% csrf_token %}
+
+                        <!-- Anti-spam Honeypot Field (Hidden from human visitors) -->
+                        <div class="d-none" aria-hidden="true">
+                            {{ form.honeypot }}
+                        </div>
+
+                        <!-- Global Form Error Alert -->
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger mb-4 modern-alert" role="alert">
+                                {% for error in form.non_field_errors %}
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                        <span>{{ error }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="row g-3">
+                            <!-- Full Name Field -->
+                            <div class="col-md-6">
+                                <label for="{{ form.name.id_for_label }}" class="form-label fw-semibold small text-primary-custom">
+                                    <i class="fa-solid fa-user me-1 text-accent"></i> Full Name <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group-modern">
+                                    {{ form.name }}
+                                </div>
+                                {% if form.name.errors %}
+                                    <div class="invalid-feedback d-block mt-1 small text-danger">
+                                        {% for error in form.name.errors %}
+                                            <i class="fa-solid fa-circle-exclamation me-1"></i> {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Email Address Field -->
+                            <div class="col-md-6">
+                                <label for="{{ form.email.id_for_label }}" class="form-label fw-semibold small text-primary-custom">
+                                    <i class="fa-solid fa-at me-1 text-accent"></i> Email Address <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group-modern">
+                                    {{ form.email }}
+                                </div>
+                                {% if form.email.errors %}
+                                    <div class="invalid-feedback d-block mt-1 small text-danger">
+                                        {% for error in form.email.errors %}
+                                            <i class="fa-solid fa-circle-exclamation me-1"></i> {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="col-12">
+                                <label for="{{ form.subject.id_for_label }}" class="form-label fw-semibold small text-primary-custom">
+                                    <i class="fa-solid fa-tag me-1 text-accent"></i> Subject <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group-modern">
+                                    {{ form.subject }}
+                                </div>
+                                {% if form.subject.errors %}
+                                    <div class="invalid-feedback d-block mt-1 small text-danger">
+                                        {% for error in form.subject.errors %}
+                                            <i class="fa-solid fa-circle-exclamation me-1"></i> {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Message Textarea Field -->
+                            <div class="col-12">
+                                <label for="{{ form.message.id_for_label }}" class="form-label fw-semibold small text-primary-custom">
+                                    <i class="fa-solid fa-comment-dots me-1 text-accent"></i> Your Message <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group-modern">
+                                    {{ form.message }}
+                                </div>
+                                {% if form.message.errors %}
+                                    <div class="invalid-feedback d-block mt-1 small text-danger">
+                                        {% for error in form.message.errors %}
+                                            <i class="fa-solid fa-circle-exclamation me-1"></i> {{ error }}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 pt-2">
+                                <button type="submit" class="btn btn-primary-gradient px-4 py-3 w-100 d-inline-flex align-items-center justify-content-center gap-2 shadow-sm" id="btnSubmitContact">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span class="fw-semibold">Send Message</span>
+                                </button>
+                                <p class="tiny text-muted-custom text-center mt-2 mb-0">
+                                    <i class="fa-solid fa-lock me-1"></i> Protected by server-side validation &amp; CSRF encryption.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

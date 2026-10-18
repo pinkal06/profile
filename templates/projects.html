@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects &amp; Practicals – Pinkal Rathod | Web, Mobile &amp; ML Showcase{% endblock %}
+{% block meta_description %}Explore 5 key software and coursework projects by Pinkal Rathod: RetiyaMarket, VELORIA, GameZone, Animal Classification, and Android Student Data Storage.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header py-5">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="{% url 'portfolio:home' %}"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Projects</li>
+            </ol>
+        </nav>
+        <span class="section-tag">Practicals &amp; Systems</span>
+        <h1 class="page-title display-5 fw-bold mb-3">Projects &amp; <span class="gradient-text">Coursework</span></h1>
+        <p class="text-muted-custom lead max-width-650">
+            Showcase of academic practicals, application prototypes, and concept platforms developed across Python, Django, Flutter, Android, and ML.
+        </p>
+    </div>
+</div>
+
+<!-- Projects Showcase Section -->
+<section class="pb-5">
+    <div class="container">
+        <!-- Integrity Notice -->
+        <div class="alert alert-subtle-accent mb-4 d-flex align-items-center gap-3 p-3 modern-glass-card" role="alert">
+            <i class="fa-solid fa-shield-halved fs-4 text-accent"></i>
+            <div class="small">
+                <strong>Project Integrity Notice:</strong> These projects represent conceptual platforms, university practical coursework, and ongoing developments. No fake metrics, fabricated live deployments, or artificial GitHub links are displayed. Links are activated as repositories are published.
+            </div>
+        </div>
+
+        <!-- Filter / Counter Bar -->
+        <div class="projects-meta-bar d-flex flex-wrap align-items-center justify-content-between p-3 modern-glass-card mb-4">
+            <span class="text-muted-custom small">
+                Showing all <strong>{{ projects_list|length }}</strong> configured academic &amp; development projects
+            </span>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge badge-subtle"><i class="fa-solid fa-layer-group me-1"></i> Web (3)</span>
+                <span class="badge badge-subtle"><i class="fa-solid fa-mobile-screen me-1"></i> Mobile (1)</span>
+                <span class="badge badge-subtle"><i class="fa-solid fa-brain me-1"></i> ML (1)</span>
+            </div>
+        </div>
+
+        <!-- Projects Grid Using Reusable Partial -->
+        <div class="row g-4">
+            {% for project in projects_list %}
+                {% include 'partials/project_card.html' with project=project %}
+            {% endfor %}
+        </div>
+
+        <!-- Bottom Academic Note -->
+        <div class="modern-glass-card p-4 p-md-5 mt-5 text-center">
+            <div class="quick-icon mx-auto mb-3">
+                <i class="fa-solid fa-laptop-code text-accent fs-4"></i>
+            </div>
+            <h3 class="h4 fw-bold mb-2">More Projects in Progress</h3>
+            <p class="text-muted-custom max-width-650 mx-auto mb-4">
+                As coursework progresses at Gujarat Vidyapith, new practical assignments and software prototypes will be cataloged here with source repositories and live demonstrations.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'portfolio:skills' %}" class="btn btn-outline-glass px-4 py-2">
+                    <i class="fa-solid fa-code me-1"></i> View Technical Skills
+                </a>
+                <a href="{% url 'portfolio:home' %}#contact" class="btn btn-primary-gradient px-4 py-2">
+                    <i class="fa-solid fa-paper-plane me-1"></i> Contact Pinkal
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
