@@ -34,6 +34,13 @@
     --font-mono: 'JetBrains Mono', monospace;
 
     --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Premium Custom Cursor Variables (Dark Mode) */
+    --cursor-dot-bg: #38bdf8;
+    --cursor-dot-glow: rgba(56, 189, 248, 0.65);
+    --cursor-ring-border: rgba(56, 189, 248, 0.55);
+    --cursor-ring-bg-hover: rgba(56, 189, 248, 0.12);
+    --cursor-ring-glow: rgba(56, 189, 248, 0.25);
 }
 
 [data-theme="light"] {
@@ -59,6 +66,13 @@
 
     --top-bar-bg: #E2E8F0;
     --navbar-bg: rgba(255, 255, 255, 0.92);
+
+    /* Premium Custom Cursor Variables (Light Mode) */
+    --cursor-dot-bg: #0284c7;
+    --cursor-dot-glow: rgba(2, 132, 199, 0.5);
+    --cursor-ring-border: rgba(2, 132, 199, 0.6);
+    --cursor-ring-bg-hover: rgba(2, 132, 199, 0.12);
+    --cursor-ring-glow: rgba(2, 132, 199, 0.2);
 }
 
 /* ====================================================
@@ -1265,6 +1279,361 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
+
+/* ====================================================
+   PREMIUM CUSTOM CURSOR SYSTEM
+   Hardware-accelerated, Pointer-events: none, Zero Lag
+   ==================================================== */
+.custom-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--cursor-dot-bg);
+    pointer-events: none !important;
+    user-select: none !important;
+    z-index: 999999;
+    opacity: 0;
+    scale: 1;
+    box-shadow: 0 0 10px var(--cursor-dot-glow);
+    transition: opacity 0.25s ease,
+                scale 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+    will-change: transform, opacity;
+}
+
+.custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid var(--cursor-ring-border);
+    background-color: transparent;
+    pointer-events: none !important;
+    user-select: none !important;
+    z-index: 999998;
+    opacity: 0;
+    scale: 1;
+    box-shadow: 0 0 16px var(--cursor-ring-glow);
+    transition: opacity 0.25s ease,
+                scale 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+    will-change: transform, opacity;
+}
+
+/* Cursor Visible State */
+.custom-cursor-dot.cursor-visible,
+.custom-cursor-ring.cursor-visible {
+    opacity: 1;
+}
+
+/* 1. Cursor Interactive Hover on Links, Buttons & Actions */
+.custom-cursor-ring.cursor-hover {
+    scale: 1.45;
+    border-color: var(--cursor-dot-bg);
+    background-color: var(--cursor-ring-bg-hover);
+    box-shadow: 0 0 22px var(--cursor-ring-glow);
+}
+
+.custom-cursor-dot.cursor-hover {
+    scale: 0.55;
+    background-color: var(--cursor-dot-bg);
+}
+
+/* 2. Cursor Hover on Cards, Artwork & Large Clickable Containers */
+.custom-cursor-ring.cursor-card-hover {
+    scale: 1.6;
+    border-color: var(--accent-cyan);
+    background-color: rgba(56, 189, 248, 0.06);
+    box-shadow: 0 0 20px var(--cursor-ring-glow);
+}
+
+.custom-cursor-dot.cursor-card-hover {
+    scale: 1.15;
+}
+
+/* 3. Cursor State for Input & Textarea Elements (Unobstructed Typing) */
+.custom-cursor-ring.cursor-input-focus {
+    scale: 0.72;
+    border-color: var(--accent-cyan);
+    opacity: 0.45;
+}
+
+.custom-cursor-dot.cursor-input-focus {
+    scale: 0.5;
+    opacity: 0.3;
+}
+
+/* 4. Cursor Click Feedback (Tactile Active Press) */
+.custom-cursor-ring.cursor-click {
+    scale: 0.82 !important;
+    border-color: var(--cursor-dot-bg);
+    transition: scale 0.1s ease !important;
+}
+
+.custom-cursor-dot.cursor-click {
+    scale: 1.4 !important;
+    transition: scale 0.1s ease !important;
+}
+
+/* ====================================================
+   SMOOTH PAGE ANIMATIONS & VIEWPORT SCROLL REVEALS
+   Intersection Observer driven, 60fps GPU acceleration
+   ==================================================== */
+
+/* Smooth Page Load Entrance */
+@keyframes pageEntranceFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main-content {
+    animation: pageEntranceFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Base state: Content remains completely visible if JavaScript is disabled or fails */
+.reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+}
+
+/* Active reveal state only when JS is verified running */
+html.js-ready .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+html.js-ready .reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delay Classes */
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+.reveal-delay-5 { transition-delay: 0.40s; }
+.reveal-delay-6 { transition-delay: 0.48s; }
+
+/* Enhanced Micro-Interactions & Hover Elevations */
+.modern-glass-card,
+.project-card,
+.skill-card,
+.discipline-card,
+.education-card,
+.contact-info-card,
+.contact-form-card,
+.bio-narrative-card {
+    transition: transform 0.35s cubic-bezier(0.34, 1.45, 0.64, 1), 
+                box-shadow 0.35s ease, 
+                border-color 0.32s ease,
+                background-color 0.35s ease;
+}
+
+.project-card:hover,
+.modern-glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--border-hover);
+}
+
+/* Project Artwork Icon & Illustration Zoom */
+.project-artwork {
+    overflow: hidden;
+}
+
+.project-artwork-bg {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-art-icon-circle {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.project-card:hover .project-art-icon-circle {
+    transform: scale(1.12);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+.project-card:hover .project-artwork-bg {
+    transform: scale(1.06);
+}
+
+/* Profile Photo Subtle Hover Zoom */
+.profile-avatar-img,
+.about-portrait-img,
+.resume-avatar-img {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-card:hover .profile-avatar-img,
+.about-portrait-card:hover .about-portrait-img,
+.about-portrait-wrapper:hover .about-portrait-img,
+.resume-avatar-wrapper:hover .resume-avatar-img {
+    transform: scale(1.06);
+}
+
+/* Animated Underline for Navigation Links */
+.main-navbar .nav-link {
+    position: relative;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.main-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-navbar .nav-link:hover::after,
+.main-navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Smooth Button Hover Elevation & Press */
+.btn-primary-gradient,
+.btn-outline-glass,
+.btn-social,
+.btn-linkedin,
+.btn-back-to-top,
+.btn-icon {
+    transition: transform 0.25s cubic-bezier(0.34, 1.4, 0.64, 1),
+                box-shadow 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease,
+                filter 0.25s ease;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
+    filter: brightness(1.06);
+}
+
+.btn-outline-glass:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.15);
+}
+
+.btn-social:hover,
+.btn-linkedin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
+}
+
+.btn-primary-gradient:active,
+.btn-outline-glass:active,
+.btn-social:active,
+.btn-linkedin:active,
+.btn-icon:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Tech Badges & Chips Subtle Micro-Hover */
+.tech-chip,
+.badge-tag,
+.badge-subtle {
+    transition: transform 0.2s cubic-bezier(0.34, 1.4, 0.64, 1),
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                color 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.tech-chip:hover,
+.badge-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Smooth Theme Transitions */
+body,
+.main-navbar,
+.site-footer,
+.top-status-bar,
+.modern-glass-card,
+.contact-item,
+.btn-icon,
+.modern-form-control,
+.academic-quick-box,
+.timeline-content,
+.resume-sheet {
+    transition: background-color 0.35s ease,
+                border-color 0.35s ease,
+                color 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+/* ====================================================
+   RESPONSIVE & ACCESSIBILITY REQUIREMENTS
+   ==================================================== */
+
+/* Disable custom cursor on touch devices & small screens */
+@media (hover: none) and (pointer: coarse), (max-width: 991.98px) {
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+
+    .reveal-on-scroll,
+    html.js-ready .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    #main-content {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
 
 
 

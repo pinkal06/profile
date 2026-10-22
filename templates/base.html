@@ -23,11 +23,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- Theme initialization script to prevent flash of wrong theme -->
+    <!-- Theme & progressive enhancement initialization script -->
     <script>
         (function() {
             var savedTheme = localStorage.getItem('pr_portfolio_theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.classList.add('js-ready');
         })();
     </script>
 
@@ -258,6 +259,10 @@
     <a href="#" class="btn-back-to-top" id="backToTop" aria-label="Back to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
+
+    <!-- Premium Custom Cursor (Hardware-accelerated, Pointer-events: none) -->
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
