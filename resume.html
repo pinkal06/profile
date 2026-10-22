@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pinkal Rathod – Professional Flutter Developer Resume | BCA Student</title>
+    <meta name="description" content="Official resume of Pinkal Rathod, Aspiring Flutter Developer and BCA Student at Gujarat Vidyapith with projects in Flutter, Dart, and Django.">
+    <meta name="author" content="Pinkal Rathod">
+
+    <!-- Google Fonts: Poppins, Inter, Outfit, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Theme & progressive enhancement initialization script -->
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('pr_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.classList.add('js-ready');
+        })();
+    </script>
+
+    
+</head>
+<body class="theme-dark">
+    <!-- Top Announcement / Status Bar -->
+    <div class="top-status-bar py-1 text-center small">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="d-inline-flex align-items-center gap-2">
+                <span class="status-indicator"></span>
+                <span>Open to learning, collaboration & internship opportunities</span>
+            </span>
+            <span class="d-none d-md-inline-block text-muted-custom">
+                <i class="fa-solid fa-graduation-cap me-1 text-accent"></i> Gujarat Vidyapith &bull; BCA (2025–Present)
+            </span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <div class="brand-badge">PR</div>
+                <div class="brand-text">
+                    <span class="brand-name">Pinkal Rathod</span>
+                    <span class="brand-tagline">Portfolio</span>
+                </div>
+            </a>
+
+            <!-- Mobile Action + Toggler -->
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <button class="btn btn-sm btn-icon theme-toggle-btn" id="themeToggleMobile" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">
+                            <i class="fa-solid fa-house-chimney me-1 nav-icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">
+                            <i class="fa-solid fa-user me-1 nav-icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="education.html">
+                            <i class="fa-solid fa-graduation-cap me-1 nav-icon"></i> Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="skills.html">
+                            <i class="fa-solid fa-code me-1 nav-icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="projects.html">
+                            <i class="fa-solid fa-layer-group me-1 nav-icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="resume.html">
+                            <i class="fa-solid fa-file-lines me-1 nav-icon"></i> Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#certificates">
+                            <i class="fa-solid fa-award me-1 nav-icon"></i> Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#experience">
+                            <i class="fa-solid fa-briefcase me-1 nav-icon"></i> Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        
+                            <a class="nav-link" href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in me-1 nav-icon"></i> LinkedIn
+                            </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">
+                            <i class="fa-solid fa-envelope me-1 nav-icon"></i> Contact
+                        </a>
+                    </li>
+                    
+                    <!-- Theme Toggle Desktop -->
+                    <li class="nav-item ms-lg-2 d-none d-lg-block">
+                        <button class="btn btn-icon theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Switch Theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+
+                    <!-- Admin Link -->
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Block -->
+    <main id="main-content">
+        
+
+        
+<!-- Page Breadcrumb & Header -->
+<div class="page-header py-4 py-md-5 d-print-none">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb modern-breadcrumb mb-3">
+                <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house-chimney me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Resume</li>
+            </ol>
+        </nav>
+        
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+                <span class="section-tag">Professional Curriculum Vitae</span>
+                <h1 class="page-title display-6 fw-bold mb-2">Resume &amp; <span class="gradient-text">Qualifications</span></h1>
+                <p class="text-muted-custom small mb-0">
+                    Comprehensive overview of Flutter mobile engineering, coursework projects, and academic background.
+                </p>
+            </div>
+
+            <!-- Action Buttons: Download PDF and Print -->
+            <div class="d-flex flex-wrap gap-2">
+                <a href="Pinkal_Rathod_Resume.pdf" download="Pinkal_Rathod_Resume.pdf" class="btn btn-primary-gradient px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm" id="btnDownloadResumePDF">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Download Resume PDF</span>
+                </a>
+                <button type="button" class="btn btn-outline-glass px-3 py-2 d-inline-flex align-items-center gap-2" onclick="window.print()" id="btnPrintResume">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Print Resume</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Resume Container -->
+<div class="container pb-5 resume-container">
+    <div class="resume-sheet modern-glass-card p-4 p-md-5">
+        <!-- ====================================================
+             1. RESUME HEADER
+             ==================================================== -->
+        <header class="resume-header pb-4 mb-4 border-bottom border-subtle">
+            <div class="row align-items-center g-4">
+                <!-- Profile Avatar / Photo Column -->
+                <div class="col-auto">
+                    <div class="resume-avatar-wrapper shadow-sm position-relative">
+                        <img src="static/images/pinkal_rathod.jpg" 
+                             alt="Pinkal Rathod - Profile Photo" 
+                             class="resume-avatar-img"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="resume-avatar-fallback d-none align-items-center justify-content-center">
+                            <span>PR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Identity Column -->
+                <div class="col">
+                    <h2 class="h2 fw-bold mb-1 resume-name text-uppercase">Pinkal Rathod</h2>
+                    <p class="text-accent fw-bold text-uppercase small tracking-wider mb-2">
+                        ASPIRING FLUTTER DEVELOPER | BCA STUDENT
+                    </p>
+
+                    <!-- Contact Details Badges -->
+                    <div class="resume-contact-grid d-flex flex-wrap gap-2 gap-md-3 small text-muted-custom">
+                        <span>
+                            <i class="fa-solid fa-location-dot text-accent me-1"></i>
+                            Ahmedabad, Gujarat, India
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-phone text-accent me-1"></i>
+                            <a href="tel:7861040487" class="text-reset text-decoration-none">7861040487</a>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-envelope text-accent me-1"></i>
+                            <a href="mailto:pinkalrathod2007@gmail.com" class="text-reset text-decoration-none">pinkalrathod2007@gmail.com</a>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-graduation-cap text-accent me-1"></i>
+                            <a href="mailto:240130510053.cs@gujaratvidyapith.org" class="text-reset text-decoration-none">240130510053.cs@gujaratvidyapith.org</a>
+                        </span>
+                        
+                        <span>
+                            <i class="fa-brands fa-linkedin-in text-accent me-1"></i>
+                            <a href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener noreferrer" class="text-reset text-decoration-none" title="LinkedIn Profile">LinkedIn</a>
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ====================================================
+             2. CAREER OBJECTIVE
+             ==================================================== -->
+        <section class="resume-section mb-4">
+            <h3 class="resume-section-heading">
+                <i class="fa-solid fa-bullseye me-2 text-accent"></i> CAREER OBJECTIVE
+            </h3>
+            <p class="resume-text mb-0">
+                To build a career as a Flutter Developer by developing reliable, responsive, and user-friendly mobile applications while continuously improving Flutter and Dart programming skills.
+            </p>
+        </section>
+
+        <!-- ====================================================
+             3. PROFESSIONAL SUMMARY
+             ==================================================== -->
+        <section class="resume-section mb-4">
+            <h3 class="resume-section-heading">
+                <i class="fa-solid fa-user-tie me-2 text-accent"></i> PROFESSIONAL SUMMARY
+            </h3>
+            <p class="resume-text mb-0">
+                Motivated BCA student focused on Flutter mobile application development using Flutter and Dart. Developed a Flutter-based marketplace project, RetiyaMarket, and a Python Django-based fashion e-commerce website, VELORIA. Possess basic knowledge of Python, Django, HTML, CSS, JavaScript, and database technologies. Interested in building attractive, responsive, and user-friendly mobile applications. Seeking a Flutter Developer Internship or entry-level opportunity to improve technical skills and contribute to real-world mobile application projects.
+            </p>
+        </section>
+
+        <!-- ====================================================
+             4. TECHNICAL SKILLS
+             ==================================================== -->
+        <section class="resume-section mb-4">
+            <h3 class="resume-section-heading">
+                <i class="fa-solid fa-code me-2 text-accent"></i> TECHNICAL SKILLS
+            </h3>
+            <div class="row g-3">
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-mobile-screen-button me-1"></i> Mobile Development
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">Flutter</span>
+                                
+                                    <span class="badge badge-tag">Dart</span>
+                                
+                                    <span class="badge badge-tag">Android Studio</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-code me-1"></i> Programming Languages
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">Dart</span>
+                                
+                                    <span class="badge badge-tag">Python (Basic)</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-globe me-1"></i> Web Technologies
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">HTML5</span>
+                                
+                                    <span class="badge badge-tag">CSS3</span>
+                                
+                                    <span class="badge badge-tag">JavaScript (Basic)</span>
+                                
+                                    <span class="badge badge-tag">Bootstrap</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-layer-group me-1"></i> Backend Framework
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">Django (Basic)</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-database me-1"></i> Database Technologies
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">MySQL</span>
+                                
+                                    <span class="badge badge-tag">SQLite</span>
+                                
+                                    <span class="badge badge-tag">Firebase (Basic)</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 academic-highlights rounded-3 h-100">
+                            <span class="d-block small fw-bold text-accent mb-2">
+                                <i class="fa-solid fa-wrench me-1"></i> Tools &amp; Platforms
+                            </span>
+                            <div class="d-flex flex-wrap gap-1">
+                                
+                                    <span class="badge badge-tag">Git</span>
+                                
+                                    <span class="badge badge-tag">GitHub</span>
+                                
+                                    <span class="badge badge-tag">Android Studio</span>
+                                
+                                    <span class="badge badge-tag">XAMPP</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </section>
+
+        <!-- ====================================================
+             5. PROJECTS
+             ==================================================== -->
+        <section class="resume-section mb-4">
+            <h3 class="resume-section-heading">
+                <i class="fa-solid fa-layer-group me-2 text-accent"></i> PROJECTS
+            </h3>
+            <div class="vstack gap-3">
+                
+                    <div class="resume-project-item p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-1">
+                            <h4 class="h6 fw-bold mb-1">RetiyaMarket – Flutter Mobile Application</h4>
+                            <span class="badge badge-subtle small">Mobile Application</span>
+                        </div>
+                        <p class="tiny text-accent mb-2">
+                            <strong>Technologies:</strong> Flutter, Dart, MySQL
+                        </p>
+                        <ul class="mb-0 small ps-3 text-muted-custom">
+                            
+                                <li class="mb-1">Developed a mobile marketplace project focused on buying and selling products.</li>
+                            
+                                <li class="mb-1">Worked on a user-friendly mobile interface for a student marketplace.</li>
+                            
+                                <li class="mb-1">Planned marketplace features such as product listings, user authentication, wishlist, chat, and order management.</li>
+                            
+                        </ul>
+                    </div>
+                
+                    <div class="resume-project-item p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-1">
+                            <h4 class="h6 fw-bold mb-1">VELORIA – Fashion E-Commerce Website</h4>
+                            <span class="badge badge-subtle small">Web Application</span>
+                        </div>
+                        <p class="tiny text-accent mb-2">
+                            <strong>Technologies:</strong> Python, Django, HTML, CSS, Bootstrap, JavaScript
+                        </p>
+                        <ul class="mb-0 small ps-3 text-muted-custom">
+                            
+                                <li class="mb-1">Created a fashion e-commerce website project with a modern shopping interface.</li>
+                            
+                                <li class="mb-1">Worked on product categories and the design of a responsive shopping experience.</li>
+                            
+                                <li class="mb-1">Explored features such as user authentication, shopping cart, and wishlist.</li>
+                            
+                        </ul>
+                    </div>
+                
+            </div>
+        </section>
+
+        <!-- ====================================================
+             6. EDUCATION
+             ==================================================== -->
+        <section class="resume-section mb-4">
+            <h3 class="resume-section-heading">
+                <i class="fa-solid fa-graduation-cap me-2 text-accent"></i> EDUCATION
+            </h3>
+            <div class="vstack gap-3">
+                
+                    <div class="p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-1">
+                            <h4 class="h6 fw-bold mb-1">Bachelor of Computer Applications (BCA)</h4>
+                            <span class="badge badge-subtle">2025 – Present</span>
+                        </div>
+                        <p class="small text-accent mb-1">
+                            <i class="fa-solid fa-building-columns me-1"></i> Gujarat Vidyapith, Ahmedabad, Gujarat
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3 small text-muted-custom">
+                            
+                                <span><strong class="text-primary-custom">CGPA:</strong> 7.73 after Semester 4</span>
+                            
+                            
+                            
+                            
+                                <span><strong class="text-primary-custom">Department:</strong> Computer Science</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-1">
+                            <h4 class="h6 fw-bold mb-1">12th Science</h4>
+                            <span class="badge badge-subtle">Passing Year: 2024</span>
+                        </div>
+                        <p class="small text-accent mb-1">
+                            <i class="fa-solid fa-building-columns me-1"></i> Higher Secondary Certificate (12th – Science)
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3 small text-muted-custom">
+                            
+                            
+                                <span><strong class="text-primary-custom">Percentage:</strong> 63.38%</span>
+                            
+                            
+                            
+                                <span><strong class="text-primary-custom">Department:</strong> Science Stream</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-1">
+                            <h4 class="h6 fw-bold mb-1">10th SSC</h4>
+                            <span class="badge badge-subtle">Passing Year: 2022</span>
+                        </div>
+                        <p class="small text-accent mb-1">
+                            <i class="fa-solid fa-building-columns me-1"></i> Secondary School Certificate (10th)
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3 small text-muted-custom">
+                            
+                            
+                                <span><strong class="text-primary-custom">Percentage:</strong> 69.50%</span>
+                            
+                            
+                                <span><strong class="text-primary-custom">Percentile Rank:</strong> 78.35</span>
+                            
+                            
+                                <span><strong class="text-primary-custom">Department:</strong> General Education</span>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </section>
+
+        <!-- ====================================================
+             7. WORK EXPERIENCE & LANGUAGES
+             ==================================================== -->
+        <div class="row g-4">
+            <!-- Work Experience -->
+            <div class="col-md-7">
+                <section class="resume-section">
+                    <h3 class="resume-section-heading">
+                        <i class="fa-solid fa-briefcase me-2 text-accent"></i> WORK EXPERIENCE
+                    </h3>
+                    <div class="p-3 academic-highlights rounded-3">
+                        <h4 class="h6 fw-bold mb-1">Fresher | Flutter Mobile App Development</h4>
+                        <p class="small text-muted-custom mb-0">
+                            Seeking an opportunity to begin a professional career in Flutter development, gain hands-on industry experience, and build cross-platform mobile applications.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Languages -->
+            <div class="col-md-5">
+                <section class="resume-section">
+                    <h3 class="resume-section-heading">
+                        <i class="fa-solid fa-language me-2 text-accent"></i> LANGUAGES
+                    </h3>
+                    <div class="p-3 academic-highlights rounded-3">
+                        <div class="d-flex flex-wrap gap-2">
+                            
+                                <span class="badge badge-subtle px-3 py-2">
+                                    <i class="fa-solid fa-check me-1 text-accent"></i> Gujarati
+                                </span>
+                            
+                                <span class="badge badge-subtle px-3 py-2">
+                                    <i class="fa-solid fa-check me-1 text-accent"></i> Hindi
+                                </span>
+                            
+                                <span class="badge badge-subtle px-3 py-2">
+                                    <i class="fa-solid fa-check me-1 text-accent"></i> English
+                                </span>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Sheet Footer Bar -->
+        <div class="resume-footer mt-4 pt-3 border-top border-subtle d-flex flex-wrap justify-content-between align-items-center tiny text-muted-custom">
+            <span>Pinkal Rathod &bull; Verified Academic &amp; Tech Profile</span>
+            <span>Generated from portfolio system</span>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-badge">PR</div>
+                        <span class="footer-brand-title">Pinkal Rathod</span>
+                    </div>
+                    <p class="footer-description text-muted-custom">
+                        BCA student at Gujarat Vidyapith with a deep passion for building backend web architectures in Python Django and intuitive cross-platform mobile apps using Flutter.
+                    </p>
+                    <div class="footer-tech-tags d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge badge-subtle"><i class="fa-brands fa-python me-1"></i> Python</span>
+                        <span class="badge badge-subtle"><i class="fa-solid fa-globe me-1"></i> Django</span>
+                        <span class="badge badge-subtle"><i class="fa-brands fa-flutter me-1"></i> Flutter</span>
+                        <span class="badge badge-subtle"><i class="fa-solid fa-database me-1"></i> SQLite</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading">Navigation</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right me-1 small"></i> About Me</a></li>
+                        <li><a href="education.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Education</a></li>
+                        <li><a href="skills.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Skills</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="resume.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Resume</a></li>
+                        <li><a href="#certificates"><i class="fa-solid fa-chevron-right me-1 small"></i> Certificates</a></li>
+                        <li><a href="#experience"><i class="fa-solid fa-chevron-right me-1 small"></i> Experience</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Contact Me</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Professional Connect</h5>
+                    <p class="small text-muted-custom mb-3">Connect through professional profiles and direct inquiry:</p>
+                    <div class="social-links-group d-flex flex-wrap gap-2 mb-3">
+                        
+                            <a href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener noreferrer" class="btn btn-social" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        
+
+                        
+                            <a href="#contact" class="btn btn-social" title="GitHub Profile (Editable in Admin)">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        
+
+                        <a href="contact.html" class="btn btn-social" title="Direct Contact Form">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="index.html" class="btn btn-social" title="Portfolio Home">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                    <span class="small text-muted-custom d-block">
+                        <i class="fa-solid fa-shield-check text-accent me-1"></i> Verified Academic & Tech Profile
+                    </span>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4">
+
+            <div class="row align-items-center small text-muted-custom">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    &copy; 2025–2026 <strong>Pinkal Rathod</strong>. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Built with <span class="text-accent fw-bold">Python & Django</span> &bull; Gujarat Vidyapith
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn-back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Premium Custom Cursor (Hardware-accelerated, Pointer-events: none) -->
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom Main JS -->
+    <script src="static/js/main.js"></script>
+
+    
+</body>
+</html>

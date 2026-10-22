@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pinkal Rathod – Personal Portfolio | Aspiring Python Django &amp; Flutter Developer</title>
+    <meta name="description" content="Official portfolio of Pinkal Rathod, BCA Student at Gujarat Vidyapith and Aspiring Python Django &amp; Flutter Developer.">
+    <meta name="author" content="Pinkal Rathod">
+
+    <!-- Google Fonts: Poppins, Inter, Outfit, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Theme & progressive enhancement initialization script -->
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('pr_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.classList.add('js-ready');
+        })();
+    </script>
+
+    
+</head>
+<body class="theme-dark">
+    <!-- Top Announcement / Status Bar -->
+    <div class="top-status-bar py-1 text-center small">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="d-inline-flex align-items-center gap-2">
+                <span class="status-indicator"></span>
+                <span>Open to learning, collaboration & internship opportunities</span>
+            </span>
+            <span class="d-none d-md-inline-block text-muted-custom">
+                <i class="fa-solid fa-graduation-cap me-1 text-accent"></i> Gujarat Vidyapith &bull; BCA (2025–Present)
+            </span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <div class="brand-badge">PR</div>
+                <div class="brand-text">
+                    <span class="brand-name">Pinkal Rathod</span>
+                    <span class="brand-tagline">Portfolio</span>
+                </div>
+            </a>
+
+            <!-- Mobile Action + Toggler -->
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <button class="btn btn-sm btn-icon theme-toggle-btn" id="themeToggleMobile" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fa-solid fa-house-chimney me-1 nav-icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">
+                            <i class="fa-solid fa-user me-1 nav-icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="education.html">
+                            <i class="fa-solid fa-graduation-cap me-1 nav-icon"></i> Education
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="skills.html">
+                            <i class="fa-solid fa-code me-1 nav-icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="projects.html">
+                            <i class="fa-solid fa-layer-group me-1 nav-icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="resume.html">
+                            <i class="fa-solid fa-file-lines me-1 nav-icon"></i> Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#certificates">
+                            <i class="fa-solid fa-award me-1 nav-icon"></i> Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#experience">
+                            <i class="fa-solid fa-briefcase me-1 nav-icon"></i> Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        
+                            <a class="nav-link" href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in me-1 nav-icon"></i> LinkedIn
+                            </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">
+                            <i class="fa-solid fa-envelope me-1 nav-icon"></i> Contact
+                        </a>
+                    </li>
+                    
+                    <!-- Theme Toggle Desktop -->
+                    <li class="nav-item ms-lg-2 d-none d-lg-block">
+                        <button class="btn btn-icon theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Switch Theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+
+                    <!-- Admin Link -->
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Block -->
+    <main id="main-content">
+        
+
+        
+<!-- ====================================================
+     1. HERO SECTION (Requirement #3)
+     ==================================================== -->
+<section class="hero-section position-relative overflow-hidden py-5 d-flex align-items-center" id="hero">
+    <!-- Subtle Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <div class="container py-lg-4 position-relative z-index-2">
+        <div class="row align-items-center g-5">
+            <!-- Left Column: Hero Content & CTA -->
+            <div class="col-lg-7 text-center text-lg-start hero-text-col">
+                <!-- Small Introductory Label -->
+                <div class="hero-intro-label mb-3 d-inline-flex align-items-center gap-2">
+                    <span class="status-pulse-dot"></span>
+                    <span class="text-uppercase fw-bold tracking-wider">HELLO, I'M</span>
+                </div>
+
+                <!-- Large Heading -->
+                <h1 class="hero-title mb-2">
+                    <span class="gradient-text">Pinkal Rathod</span>
+                </h1>
+
+                <!-- Professional Title -->
+                <div class="hero-role-badge mb-3">
+                    <span class="fw-semibold text-accent fs-5">
+                        BCA Student | Aspiring Python Django &amp; Flutter Developer
+                    </span>
+                </div>
+
+                <!-- Animated Skill Text -->
+                <div class="hero-typing-wrapper mb-3">
+                    <span class="text-muted-custom me-2">Focusing on:</span>
+                    <span class="typing-text" id="typingText" data-titles='["Python Development", "Django Web Development", "Flutter App Development", "Android Development", "Frontend Development"]'></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+
+                <!-- Concise Introduction -->
+                <p class="hero-lead text-muted-custom mb-4 pe-lg-4">
+                    I am a Computer Applications student at <strong>Gujarat Vidyapith</strong> (2025 – Present) passionate about learning modern programming, developing robust full-stack web architectures with Python &amp; Django, and engineering responsive cross-platform mobile applications with Flutter.
+                </p>
+
+                <!-- Technical Interests Chips -->
+                <div class="hero-chips d-flex flex-wrap gap-2 mb-4 justify-content-center justify-content-lg-start">
+                    <span class="tech-chip"><i class="fa-brands fa-python text-accent me-1"></i> Python</span>
+                    <span class="tech-chip"><i class="fa-solid fa-layer-group text-accent me-1"></i> Django</span>
+                    <span class="tech-chip"><i class="fa-brands fa-flutter text-accent me-1"></i> Flutter</span>
+                    <span class="tech-chip"><i class="fa-brands fa-android text-accent me-1"></i> Android</span>
+                    <span class="tech-chip"><i class="fa-solid fa-code text-accent me-1"></i> Frontend</span>
+                    <span class="tech-chip"><i class="fa-solid fa-database text-accent me-1"></i> SQLite &amp; MySQL</span>
+                    <span class="tech-chip"><i class="fa-solid fa-brain text-accent me-1"></i> Machine Learning</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hero-actions d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                    <!-- Primary Button: View Projects -->
+                    <a href="#projects" class="btn btn-primary-gradient px-4 py-3 d-inline-flex align-items-center gap-2 shadow-sm" id="btnHeroProjects">
+                        <i class="fa-solid fa-code-fork"></i>
+                        <span>View Projects</span>
+                    </a>
+
+                    <!-- Secondary Button: Contact Me -->
+                    <a href="#contact" class="btn btn-outline-glass px-4 py-3 d-inline-flex align-items-center gap-2" id="btnHeroContact">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Contact Me</span>
+                    </a>
+
+                    <!-- Resume button: only if real resume download route/file exists -->
+                    
+                        <a href="resume.html" class="btn btn-outline-glass px-4 py-3 d-inline-flex align-items-center gap-2" id="btnHeroResume">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    
+
+                    <!-- LinkedIn button: only if real URL has been configured -->
+                    
+                        <a href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener" class="btn btn-linkedin px-3 py-3 d-inline-flex align-items-center gap-2" id="btnHeroLinkedIn" title="Pinkal Rathod on LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="d-none d-sm-inline">LinkedIn</span>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <!-- Right Column: Profile Photo Card with Subtle Animations -->
+            <div class="col-lg-5 text-center">
+                <div class="hero-card-wrapper position-relative mx-auto">
+                    <!-- Rotating Decorative Border Ring -->
+                    <div class="ambient-ring"></div>
+
+                    <!-- Profile Card -->
+                    <div class="profile-card modern-glass-card p-4 text-center">
+                        <div class="profile-avatar-container mx-auto mb-4 position-relative">
+                            <div class="profile-avatar-circle d-flex align-items-center justify-content-center">
+                                <img src="static/images/pinkal_rathod.jpg" alt="Pinkal Rathod - Profile Photo" class="profile-avatar-img">
+                            </div>
+                            <span class="profile-badge-pill" title="Academic Status">
+                                <i class="fa-solid fa-graduation-cap me-1"></i> BCA Scholar
+                            </span>
+                        </div>
+
+                        <h3 class="profile-name mb-1">Pinkal Rathod</h3>
+                        <p class="profile-role text-accent mb-3">Aspiring Full-Stack &amp; App Developer</p>
+
+                        <!-- Academic Quick Info Box -->
+                        <div class="academic-quick-box p-3 text-start mb-3">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="quick-icon"><i class="fa-solid fa-building-columns text-accent"></i></div>
+                                <div>
+                                    <span class="d-block tiny text-muted-custom">Institution</span>
+                                    <strong class="small">Gujarat Vidyapith</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="quick-icon"><i class="fa-solid fa-book-bookmark text-accent"></i></div>
+                                <div>
+                                    <span class="d-block tiny text-muted-custom">Degree</span>
+                                    <strong class="small">Bachelor of Computer Applications</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="quick-icon"><i class="fa-solid fa-calendar-check text-accent"></i></div>
+                                <div>
+                                    <span class="d-block tiny text-muted-custom">Academic Period</span>
+                                    <strong class="small">2025 – Present</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Pillars -->
+                        <div class="d-flex justify-content-around text-center pt-2 border-top border-subtle">
+                            <div>
+                                <span class="d-block fw-bold fs-6 text-gradient">Python 3</span>
+                                <span class="tiny text-muted-custom">Backend</span>
+                            </div>
+                            <div class="vr opacity-25"></div>
+                            <div>
+                                <span class="d-block fw-bold fs-6 text-gradient">Django</span>
+                                <span class="tiny text-muted-custom">Framework</span>
+                            </div>
+                            <div class="vr opacity-25"></div>
+                            <div>
+                                <span class="d-block fw-bold fs-6 text-gradient">Flutter</span>
+                                <span class="tiny text-muted-custom">Mobile UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     2. ABOUT PREVIEW SECTION (Requirement #4)
+     ==================================================== -->
+<section class="py-5" id="about">
+    <div class="container py-lg-3">
+        <div class="section-header text-center mb-5">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Academic &amp; Programming Journey</h2>
+            <p class="text-muted-custom max-width-650 mx-auto">
+                Dedicated student developer with an active commitment to writing structured, maintainable code.
+            </p>
+        </div>
+
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <div class="modern-glass-card p-4 p-md-5 h-100">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="icon-avatar-badge">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 mb-1">Pinkal Rathod</h3>
+                            <p class="small text-muted-custom mb-0">Gujarat Vidyapith &bull; BCA (2025 – Present)</p>
+                        </div>
+                    </div>
+
+                    <p class="text-primary-custom mb-3">
+                        I am currently pursuing my <strong>Bachelor of Computer Applications (BCA)</strong> at <strong>Gujarat Vidyapith</strong>. My academic pursuits center around foundational computer science principles, database architectures, and software engineering methodologies.
+                    </p>
+                    <p class="text-muted-custom small mb-4">
+                        My primary technical focus is on backend web application development with <strong>Python and Django</strong>, while actively expanding into cross-platform mobile apps using <strong>Flutter and Dart</strong>, as well as native Android development with Android Studio.
+                    </p>
+
+                    <a href="about.html" class="btn btn-outline-glass px-4 py-2 d-inline-flex align-items-center gap-2">
+                        <span>Learn More About Me</span>
+                        <i class="fa-solid fa-arrow-right small"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="discipline-card modern-glass-card p-4 h-100">
+                            <div class="discipline-icon mb-3">
+                                <i class="fa-solid fa-code text-accent"></i>
+                            </div>
+                            <h4 class="h6 mb-2">Software Development</h4>
+                            <p class="tiny text-muted-custom mb-0">
+                                Object-oriented programming, data structures, algorithms, and clean computational logic.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="discipline-card modern-glass-card p-4 h-100">
+                            <div class="discipline-icon mb-3">
+                                <i class="fa-solid fa-globe text-accent"></i>
+                            </div>
+                            <h4 class="h6 mb-2">Web Engineering</h4>
+                            <p class="tiny text-muted-custom mb-0">
+                                Full-stack MVT design with Django, REST principles, and secure template rendering.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="discipline-card modern-glass-card p-4 h-100">
+                            <div class="discipline-icon mb-3">
+                                <i class="fa-brands fa-flutter text-accent"></i>
+                            </div>
+                            <h4 class="h6 mb-2">Mobile Applications</h4>
+                            <p class="tiny text-muted-custom mb-0">
+                                Cross-platform Flutter UI, Dart widgets, and Android Studio native storage practicals.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="discipline-card modern-glass-card p-4 h-100">
+                            <div class="discipline-icon mb-3">
+                                <i class="fa-solid fa-database text-accent"></i>
+                            </div>
+                            <h4 class="h6 mb-2">Data Management</h4>
+                            <p class="tiny text-muted-custom mb-0">
+                                Structured SQL queries, database modeling, SQLite local persistence, and MySQL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     3. EDUCATION PREVIEW SECTION (Requirement #4)
+     ==================================================== -->
+<section class="py-5" id="education">
+    <div class="container py-lg-3">
+        <div class="section-header text-center mb-5">
+            <span class="section-tag">Education</span>
+            <h2 class="section-title">Academic Qualifications</h2>
+            <p class="text-muted-custom max-width-650 mx-auto">
+                Verified educational credentials and coursework at Gujarat Vidyapith.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="modern-glass-card p-4 p-md-5 position-relative">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                        <span class="badge badge-subtle">
+                            <i class="fa-solid fa-calendar me-1"></i> 2025 – Present
+                        </span>
+                        <span class="badge badge-accent-glow">
+                            <i class="fa-solid fa-circle-dot me-1"></i> Currently Enrolled
+                        </span>
+                    </div>
+
+                    <h3 class="h4 fw-bold mb-2">Bachelor of Computer Applications (BCA)</h3>
+                    
+                    <div class="d-flex align-items-center gap-2 text-accent fw-semibold mb-3">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Gujarat Vidyapith</span>
+                    </div>
+
+                    <p class="text-muted-custom small mb-4">
+                        Pursuing a rigorous computer applications curriculum focused on programming paradigms, database systems, software engineering, and modern development stacks.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-tag"><i class="fa-solid fa-check me-1 text-accent"></i> Python &amp; Java Programming</span>
+                        <span class="badge badge-tag"><i class="fa-solid fa-check me-1 text-accent"></i> Database Management Systems (SQL)</span>
+                        <span class="badge badge-tag"><i class="fa-solid fa-check me-1 text-accent"></i> Web Architecture &amp; Client-Server Systems</span>
+                        <span class="badge badge-tag"><i class="fa-solid fa-check me-1 text-accent"></i> Mobile Development Practicals</span>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle">
+                        <span class="tiny text-muted-custom"><i class="fa-solid fa-location-dot me-1 text-accent"></i> Gujarat, India</span>
+                        <a href="education.html" class="btn btn-sm btn-outline-glass">
+                            <span>View Full Education Details</span>
+                            <i class="fa-solid fa-chevron-right ms-1 tiny"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     4. TECHNICAL INTERESTS PREVIEW (Requirement #4)
+     ==================================================== -->
+<section class="py-5" id="skills">
+    <div class="container py-lg-3">
+        <div class="section-header text-center mb-5">
+            <span class="section-tag">Competencies</span>
+            <h2 class="section-title">Technical Interests &amp; Tooling</h2>
+            <p class="text-muted-custom max-width-650 mx-auto">
+                Technologies actively studied and practiced. Presented honestly without fabricated skill percentages or proficiency bars.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-brands fa-python text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">Core Language</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Python</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Core programming language for backend engineering, data structures, and computational scripting.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-solid fa-layer-group text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">Web Framework</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Django</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Full-stack web framework with Model-View-Template architecture, ORM queries, and secure user sessions.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-brands fa-flutter text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">Mobile SDK</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Flutter</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Cross-platform mobile SDK building smooth Android and iOS applications with Dart and reactive widgets.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-brands fa-android text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">Mobile Platform</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Android Development</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Native Android application development using Android Studio, Kotlin, Java, and local storage practicals.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-solid fa-code text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">UI &amp; Web</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Frontend Development</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Semantic HTML5 structure, responsive Bootstrap 5 grids, custom CSS3 themes, and DOM interactions in JavaScript.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-solid fa-database text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">Data Storage</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Database Management</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Relational data modeling, table schemas, SQL queries, and local data persistence in SQLite and MySQL.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-lg-3">
+                    <div class="discipline-card modern-glass-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="discipline-icon">
+                                <i class="fa-solid fa-brain text-accent"></i>
+                            </div>
+                            <span class="badge badge-subtle">AI &amp; Data</span>
+                        </div>
+                        <h3 class="h6 fw-bold mb-2">Machine Learning</h3>
+                        <p class="tiny text-muted-custom mb-0 flex-grow-1">
+                            Exploring image feature recognition, data preprocessing, and model classification workflows in Python.
+                        </p>
+                    </div>
+                </div>
+            
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="skills.html" class="btn btn-outline-glass px-4 py-2">
+                <i class="fa-solid fa-code me-1"></i> Explore Categorized Skills Page
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     5. PROJECTS PREVIEW SECTION (Requirement #4)
+     ==================================================== -->
+<section class="py-5" id="projects">
+    <div class="container py-lg-3">
+        <div class="section-header text-center mb-5">
+            <span class="section-tag">Showcase</span>
+            <h2 class="section-title">Planned &amp; Coursework Projects</h2>
+            <p class="text-muted-custom max-width-650 mx-auto">
+                Overview of practical coursework, application concepts, and prototypes. No fake links or unverified claims.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            
+                
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork art-retiyamarket position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="fa-solid fa-cart-shopping project-art-icon"></i>
+            </div>
+            
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    in_progress
+                </span>
+            
+            <span class="project-category-badge">Mobile Application</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                RetiyaMarket – Flutter Mobile Application
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                A mobile marketplace project focused on buying and selling products.
+            </p>
+
+            <!-- Technology Tags -->
+            
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    
+                        <span class="badge badge-tag">Flutter</span>
+                    
+                        <span class="badge badge-tag">Dart</span>
+                    
+                        <span class="badge badge-tag">MySQL</span>
+                    
+                </div>
+            
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    
+
+                    
+
+                    
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+                
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork art-veloria position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="fa-solid fa-bag-shopping project-art-icon"></i>
+            </div>
+            
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    in_progress
+                </span>
+            
+            <span class="project-category-badge">Web Application</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                VELORIA – Fashion E-Commerce Website
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                A fashion e-commerce website project focused on product presentation and shopping UI.
+            </p>
+
+            <!-- Technology Tags -->
+            
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    
+                        <span class="badge badge-tag">Python</span>
+                    
+                        <span class="badge badge-tag">Django</span>
+                    
+                        <span class="badge badge-tag">HTML</span>
+                    
+                        <span class="badge badge-tag">CSS</span>
+                    
+                        <span class="badge badge-tag">Bootstrap</span>
+                    
+                        <span class="badge badge-tag">JavaScript</span>
+                    
+                </div>
+            
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    
+
+                    
+
+                    
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+                
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork art-gamezone position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="fa-solid fa-gamepad project-art-icon"></i>
+            </div>
+            
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    planned
+                </span>
+            
+            <span class="project-category-badge">Web Platform Concept</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                GameZone – Gaming Platform
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                A gaming platform concept for browsing and playing games.
+            </p>
+
+            <!-- Technology Tags -->
+            
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    
+                        <span class="badge badge-tag">JavaScript</span>
+                    
+                        <span class="badge badge-tag">HTML5</span>
+                    
+                        <span class="badge badge-tag">CSS3</span>
+                    
+                </div>
+            
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    
+
+                    
+
+                    
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+                
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork art-animal position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="fa-solid fa-paw project-art-icon"></i>
+            </div>
+            
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    in_progress
+                </span>
+            
+            <span class="project-category-badge">Machine Learning</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                Animal Classification – Machine Learning Project
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                An animal-classification machine learning project.
+            </p>
+
+            <!-- Technology Tags -->
+            
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    
+                        <span class="badge badge-tag">Python</span>
+                    
+                        <span class="badge badge-tag">Machine Learning</span>
+                    
+                        <span class="badge badge-tag">Data Preprocessing</span>
+                    
+                        <span class="badge badge-tag">Image Classification</span>
+                    
+                </div>
+            
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    
+
+                    
+
+                    
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+                
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card project-card modern-glass-card h-100 border-0 overflow-hidden d-flex flex-column">
+        <!-- Project Visual Header / CSS Artwork Illustration -->
+        <div class="project-artwork art-android-storage position-relative d-flex align-items-center justify-content-center p-4">
+            <div class="project-artwork-bg"></div>
+            <div class="project-art-icon-circle shadow-sm">
+                <i class="fa-solid fa-mobile-screen-button project-art-icon"></i>
+            </div>
+            
+                <span class="project-status-badge">
+                    <span class="status-pulse-dot"></span>
+                    in_progress
+                </span>
+            
+            <span class="project-category-badge">Mobile Practical</span>
+        </div>
+
+        <!-- Project Content Body -->
+        <div class="card-body p-4 d-flex flex-column flex-grow-1">
+            <h3 class="card-title h5 mb-2 project-title">
+                Android Student Data Storage – Android Practical
+            </h3>
+            
+            <p class="card-text text-muted-custom small mb-3 flex-grow-1">
+                An Android learning project related to student data storage.
+            </p>
+
+            <!-- Technology Tags -->
+            
+                <div class="project-tags d-flex flex-wrap gap-1 mb-4">
+                    
+                        <span class="badge badge-tag">Android Studio</span>
+                    
+                        <span class="badge badge-tag">Java / Kotlin</span>
+                    
+                        <span class="badge badge-tag">SQLite</span>
+                    
+                        <span class="badge badge-tag">Android SDK</span>
+                    
+                </div>
+            
+
+            <!-- Project Actions (Strictly verified links - no fake URLs) -->
+            <div class="project-actions pt-3 border-top border-subtle d-flex align-items-center justify-content-between mt-auto">
+                <div class="d-flex align-items-center gap-2">
+                    
+
+                    
+
+                    
+                        <span class="text-muted-custom tiny d-inline-flex align-items-center gap-1" title="Links will be added upon repository release">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Links not configured (In Development)</span>
+                        </span>
+                    
+                </div>
+
+                <span class="text-accent small fw-semibold">
+                    <i class="fa-solid fa-code me-1"></i> Coursework
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="projects.html" class="btn btn-primary-gradient px-4 py-2">
+                <i class="fa-solid fa-layer-group me-1"></i> View All Project Details
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================================
+     6. CONTACT PREVIEW SECTION (Requirement #4)
+     ==================================================== -->
+<section class="py-5" id="contact">
+    <div class="container py-lg-3">
+        <div class="section-header text-center mb-5">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Connect with Pinkal Rathod</h2>
+            <p class="text-muted-custom max-width-650 mx-auto">
+                Open to discussions regarding academic projects, open-source learning, and student internship opportunities.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="modern-glass-card p-4 p-md-5 text-center">
+                    <div class="quick-icon mx-auto mb-3">
+                        <i class="fa-solid fa-envelope-open-text text-accent fs-4"></i>
+                    </div>
+
+                    <h3 class="h4 fw-bold mb-2">Let's Connect</h3>
+                    <p class="text-muted-custom max-width-650 mx-auto mb-4">
+                        Thank you for visiting my personal developer portfolio! As a student at Gujarat Vidyapith, I welcome feedback, mentorship, and opportunities to collaborate on Python Django and Flutter projects.
+                    </p>
+
+                    <div class="row g-3 justify-content-center mb-4 text-start">
+                        <div class="col-sm-6">
+                            <div class="p-3 academic-highlights rounded-3">
+                                <span class="d-block tiny text-muted-custom"><i class="fa-solid fa-user-tie text-accent me-1"></i> Name</span>
+                                <strong class="small">Pinkal Rathod</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 academic-highlights rounded-3">
+                                <span class="d-block tiny text-muted-custom"><i class="fa-solid fa-university text-accent me-1"></i> University</span>
+                                <strong class="small">Gujarat Vidyapith, Ahmedabad, Gujarat</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 academic-highlights rounded-3">
+                                <span class="d-block tiny text-muted-custom"><i class="fa-solid fa-graduation-cap text-accent me-1"></i> Degree</span>
+                                <strong class="small">Bachelor of Computer Applications (BCA) (2025 – Present)</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-3 academic-highlights rounded-3">
+                                <span class="d-block tiny text-muted-custom"><i class="fa-solid fa-location-dot text-accent me-1"></i> Location</span>
+                                <strong class="small">Gujarat, India</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-subtle-accent text-center p-3 mb-0" role="alert">
+                        <i class="fa-solid fa-shield-halved text-accent me-1"></i>
+                        <span class="small">Contact message submission form and social profile endpoints will be activated in upcoming development phases.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer mt-5 pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="brand-badge">PR</div>
+                        <span class="footer-brand-title">Pinkal Rathod</span>
+                    </div>
+                    <p class="footer-description text-muted-custom">
+                        BCA student at Gujarat Vidyapith with a deep passion for building backend web architectures in Python Django and intuitive cross-platform mobile apps using Flutter.
+                    </p>
+                    <div class="footer-tech-tags d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge badge-subtle"><i class="fa-brands fa-python me-1"></i> Python</span>
+                        <span class="badge badge-subtle"><i class="fa-solid fa-globe me-1"></i> Django</span>
+                        <span class="badge badge-subtle"><i class="fa-brands fa-flutter me-1"></i> Flutter</span>
+                        <span class="badge badge-subtle"><i class="fa-solid fa-database me-1"></i> SQLite</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading">Navigation</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right me-1 small"></i> About Me</a></li>
+                        <li><a href="education.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Education</a></li>
+                        <li><a href="skills.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Skills</a></li>
+                        <li><a href="projects.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="resume.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Resume</a></li>
+                        <li><a href="#certificates"><i class="fa-solid fa-chevron-right me-1 small"></i> Certificates</a></li>
+                        <li><a href="#experience"><i class="fa-solid fa-chevron-right me-1 small"></i> Experience</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right me-1 small"></i> Contact Me</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Professional Connect</h5>
+                    <p class="small text-muted-custom mb-3">Connect through professional profiles and direct inquiry:</p>
+                    <div class="social-links-group d-flex flex-wrap gap-2 mb-3">
+                        
+                            <a href="https://www.linkedin.com/in/pinkal-rathod-a303183b4/" target="_blank" rel="noopener noreferrer" class="btn btn-social" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        
+
+                        
+                            <a href="#contact" class="btn btn-social" title="GitHub Profile (Editable in Admin)">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        
+
+                        <a href="contact.html" class="btn btn-social" title="Direct Contact Form">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="index.html" class="btn btn-social" title="Portfolio Home">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                    <span class="small text-muted-custom d-block">
+                        <i class="fa-solid fa-shield-check text-accent me-1"></i> Verified Academic & Tech Profile
+                    </span>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4">
+
+            <div class="row align-items-center small text-muted-custom">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    &copy; 2025–2026 <strong>Pinkal Rathod</strong>. All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Built with <span class="text-accent fw-bold">Python & Django</span> &bull; Gujarat Vidyapith
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn-back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Premium Custom Cursor (Hardware-accelerated, Pointer-events: none) -->
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom Main JS -->
+    <script src="static/js/main.js"></script>
+
+    
+</body>
+</html>

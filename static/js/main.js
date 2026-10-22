@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Modern Viewport Scroll Reveal & Stagger Animations
     initScrollReveal();
+
+    // 8. Contact Form Static Notice
+    initContactForm();
 });
 
 /**
@@ -459,6 +462,24 @@ function initScrollReveal() {
         }
 
         observer.observe(el);
+    });
+}
+
+/**
+ * 8. Contact Form Handling for Decoupled / Static Deployment
+ * Informs visitors transparently that direct submission requires a backend or form service.
+ */
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const statusEl = document.getElementById('contactFormStatus');
+        if (statusEl) {
+            statusEl.classList.remove('d-none');
+            statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
     });
 }
 
